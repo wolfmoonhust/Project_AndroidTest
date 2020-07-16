@@ -1,2 +1,5 @@
-package wolfdev01.com.demowithgit 
+package wolfdev01.com.demowithgit
 
+class Category {
+
+}

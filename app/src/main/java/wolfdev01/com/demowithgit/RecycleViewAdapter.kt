@@ -1,10 +1,12 @@
 package wolfdev01.com.demowithgit
 
+import android.content.Context
+import android.view.ContextMenu
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RecycleViewAdapter : RecyclerView.Adapter<RecycleViewAdapter.MyHolder>() {
+class RecycleViewAdapter(val cotext : Context, val categories: List<Category>) : RecyclerView.Adapter<RecycleViewAdapter.MyHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {

@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
-import wolfdev01.com.demowithgit.utilities.EXTRA_LEAGUE
 import wolfdev01.com.demowithgit.R
+import wolfdev01.com.demowithgit.models.Player
+import wolfdev01.com.demowithgit.utilities.EXTRA_PLAYER
 
 class LeagueActivity : BaseActivity() {
-    var selectedLeague = ""
+
+    var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
@@ -17,9 +19,9 @@ class LeagueActivity : BaseActivity() {
 
     fun leagueNextClicked(view: View) {
 
-        if (selectedLeague != "") {
+        if (player.league != "") {
             val skillActivityIntent = Intent(this, SkillActivity::class.java)
-            skillActivityIntent.putExtra(EXTRA_LEAGUE, selectedLeague)
+            skillActivityIntent.putExtra(EXTRA_PLAYER, player)
             startActivity(skillActivityIntent)
         } else {
             Toast.makeText(this, "Please select a league", Toast.LENGTH_LONG).show()
@@ -30,19 +32,19 @@ class LeagueActivity : BaseActivity() {
     fun onMensClicked(view: View) {
         setStateClicked(false)
         mensLeagueaBtn.isChecked = true
-        selectedLeague = "mens"
+        player.league = "mens"
     }
 
     fun onWomensClicked(view: View) {
         setStateClicked(false)
         womensLeagueBtn.isChecked = true
-        selectedLeague = "womens"
+        player.league = "womens"
     }
 
     fun onCoEdClicked(view: View) {
         setStateClicked(false)
         coedLeagueBtn.isChecked = true
-        selectedLeague = "co-ed"
+        player.league = "co-ed"
     }
 
     fun setStateClicked(state: Boolean) {

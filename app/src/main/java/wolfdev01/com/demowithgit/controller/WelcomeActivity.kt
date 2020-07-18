@@ -1,10 +1,10 @@
-package wolfdev01.com.demowithgit
+package wolfdev01.com.demowithgit.controller
 
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_welcome.*
+import wolfdev01.com.demowithgit.R
 
 class WelcomeActivity : BaseActivity() {
 

@@ -1,4 +1,4 @@
-package wolfdev01.com.demowithgit
+package wolfdev01.com.demowithgit.controller
 
 import android.os.Bundle
 import android.util.Log

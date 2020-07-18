@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DemoWithGit</string>
+    <string name="app_name">Swoosh</string>
     <string name="background_image">background image</string>
     <string name="app_logo">app logo</string>
     <string name="desired_league">Desired League:</string>

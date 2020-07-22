@@ -8,7 +8,7 @@ import wolfdev01.com.demowithgit.models.Player
 import wolfdev01.com.demowithgit.utilities.EXTRA_PLAYER
 
 
-class FinishActivity : AppCompatActivity() {
+class FinishActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)

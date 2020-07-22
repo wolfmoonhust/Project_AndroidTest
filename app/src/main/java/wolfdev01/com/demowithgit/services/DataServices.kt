@@ -3,7 +3,7 @@ package wolfdev01.com.demowithgit.services
 import wolfdev01.com.demowithgit.Category
 import wolfdev01.com.demowithgit.Product
 
-class DataServices {
+object DataServices {
     val categories = listOf<Category>(
             Category("SHIRTS", "shirtimage"),
             Category("HOODIES", "hoodieimage"),

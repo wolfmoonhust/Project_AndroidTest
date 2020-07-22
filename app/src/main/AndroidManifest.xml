@@ -8,16 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controller.FinishActivity"></activity>
-        <activity android:name=".controller.SkillActivity" />
-        <activity android:name=".controller.BaseActivity" />
-        <activity android:name=".controller.LeagueActivity" />
-        <activity android:name=".controller.WelcomeActivity">
+        <activity android:name=".ListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".controller.FinishActivity" />
+        <activity android:name=".controller.SkillActivity" />
+        <activity android:name=".controller.BaseActivity" />
+        <activity android:name=".controller.LeagueActivity" />
+        <activity android:name=".controller.WelcomeActivity">
+
         </activity>
 
         <meta-data

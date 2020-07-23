@@ -8,12 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoryRecycleAdapter(val context: Context, val categories: List<Category>) : RecyclerView.Adapter<CategoryRecycleAdapter.MyHolder>() {
+class CategoryRecycleAdapter(val context: Context, val categories: List<Category>, val itemClick: (Category) -> Unit) : RecyclerView.Adapter<CategoryRecycleAdapter.MyHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.category_item, parent, false)
-        return  MyHolder(view)
+        return  MyHolder(view,itemClick)
     }
 
     override fun getItemCount(): Int {
@@ -24,7 +24,7 @@ class CategoryRecycleAdapter(val context: Context, val categories: List<Category
         holder?.bindCategory(context, categories[position])
     }
 
-    inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MyHolder(itemView: View?, val itemClick: (Category) -> Unit) : RecyclerView.ViewHolder(itemView!!) {
         val categoryImage = itemView?.findViewById<ImageView>(R.id.categoryImage)
         val categoryName = itemView?.findViewById<TextView>(R.id.categoryName)
 
@@ -32,6 +32,7 @@ class CategoryRecycleAdapter(val context: Context, val categories: List<Category
             val resoureId = context.resources.getIdentifier(category.image, "drawable", context.packageName)
             categoryImage?.setImageResource(resoureId)
             categoryName?.text = category.title
+            itemView.setOnClickListener{itemClick(category)}
         }
     }
 }

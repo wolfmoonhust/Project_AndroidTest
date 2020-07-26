@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProductsActivity"></activity>
-        <activity android:name=".ListViewActivity">
+        <activity android:name=".controller.ProductDetailActivity"></activity>
+        <activity android:name=".controller.ProductsActivity" />
+        <activity android:name=".controller.ListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +21,7 @@
         <activity android:name=".controller.SkillActivity" />
         <activity android:name=".controller.BaseActivity" />
         <activity android:name=".controller.LeagueActivity" />
-        <activity android:name=".controller.WelcomeActivity"></activity>
+        <activity android:name=".controller.WelcomeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
